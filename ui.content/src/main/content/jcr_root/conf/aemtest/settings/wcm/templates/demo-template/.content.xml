@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    jcr:primaryType="cq:Template">
+    <jcr:content
+        cq:lastModified="{Date}2025-06-20T14:19:28.985+05:30"
+        cq:lastModifiedBy="admin"
+        cq:templateType="/conf/aemtest/settings/wcm/template-types/page"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Demo template"
+        status="draft"/>
+</jcr:root>

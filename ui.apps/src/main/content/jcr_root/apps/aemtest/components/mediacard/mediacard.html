@@ -1,0 +1,44 @@
+<sly data-sly-use.mediaCards="com.aemtest.core.models">
+    <div class="${mediaCards.customClass}">
+        <div class="heading_area">
+            <h2>${mediaCards.heading}</h2>
+        </div>
+        <ul data-sly-list.items="${mediaCards.mediaCards}">
+            <li>
+                <div class="card_inner">
+                    <sly data-sly-test.hasVideo="${items.videosrc}" />
+                    <div class="video_wrapper" data-sly-test="${hasVideo}">
+                        <video class="card-video" autoplay muted playsinline loop>
+                            <source
+                                    data-sly-use.pathUrl="${'extensionhandler.js' @ path=items.videosrc}"
+                                    x-cq-linkchecker="valid"
+                                    src="${pathUrl.convertedPath}"
+                                    type="video/mp4" />
+                        </video>
+                    </div>
+                    <div class="cardImgArea" data-sly-test="${!hasVideo && items.cardImage}">
+                        <img src="${items.cardImage}" alt="cardImg" title="cardImg" />
+                    </div>
+
+                    <!-- Blue overlay content starts -->
+                    <div class="overlay-content">
+                        <div class="overlayBg"></div>
+                        <div class="overlay-text">
+                            <h4>${items.cardTitle}</h4>
+                            <div class="description">
+                                ${items.cardDescription @context='html'}
+                            </div>
+                            <a href="${items.ctalink @extension='html'}"
+                               title="${items.ctalabel}"
+                               target="${items.newTab ? '_blank' : '_self'}"
+                               class="btn-link">
+                                ${items.ctalabel}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</sly>
+<sly data-sly-unwrap.nauthor="${!wcmmode.edit}" class="cq-placeholder" data-emptytext="Media Card"></sly>
