@@ -345,7 +345,7 @@
                         jcr:lastModified="{Date}2025-06-20T15:20:23.414+05:30"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
-                        jcr:title="demo policy"
+                        jcr:title="Proxy container policy"
                         sling:resourceType="wcm/core/components/policy/policy"
                         components="group:AEM Test Project - Content"
                         layoutDisabled="false">

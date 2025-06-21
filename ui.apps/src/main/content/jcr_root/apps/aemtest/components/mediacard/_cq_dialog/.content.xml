@@ -53,14 +53,15 @@
                                                         <cardVideosrc
                                                             jcr:primaryType="nt:unstructured"
                                                             sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
-                                                            fieldLabel="Please upload your video path here for the Card."
+                                                            fieldLabel="Video Path"
                                                             name="./videosrc"
+                                                            fieldDescription="Select video path."
                                                             rootPath="/content"/>
                                                         <cardImage
                                                             jcr:primaryType="nt:unstructured"
                                                             sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
                                                             class="cq-droptarget"
-                                                            fieldDescription="Please upload your image here for the Card."
+                                                            fieldDescription="Select card image"
                                                             fieldLabel="Card Image"
                                                             fileNameParameter="./cardImgFileName"
                                                             fileReferenceParameter="./cardImgFileReference"
