@@ -7,5 +7,5 @@
         cq:templateType="/conf/aemtest/settings/wcm/template-types/page"
         jcr:primaryType="cq:PageContent"
         jcr:title="Demo template"
-        status="draft"/>
+        status="enabled"/>
 </jcr:root>

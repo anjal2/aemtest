@@ -1,0 +1,204 @@
+/* Margin Top */
+.mt-20 { margin-top: 20px; }
+.mt-60 { margin-top: 60px; }
+.mt-90 { margin-top: 90px; }
+.mt-120 { margin-top: 120px; }
+.mt-140 { margin-top: 140px; }
+
+/* Margin Bottom */
+.mb-20 { margin-bottom: 20px; }
+.mb-60 { margin-bottom: 60px; }
+.mb-90 { margin-bottom: 90px; }
+.mb-120 { margin-bottom: 120px; }
+.mb-140 { margin-bottom: 140px; }
+
+/* Margin Left */
+.ml-20 { margin-left: 20px; }
+.ml-60 { margin-left: 60px; }
+.ml-90 { margin-left: 90px; }
+.ml-120 { margin-left: 120px; }
+.ml-140 { margin-left: 140px; }
+
+/* Margin Right */
+.mr-20 { margin-right: 20px; }
+.mr-60 { margin-right: 60px; }
+.mr-90 { margin-right: 90px; }
+.mr-120 { margin-right: 120px; }
+.mr-140 { margin-right: 140px; }
+
+/* Padding Top */
+.pt-20 { padding-top: 20px; }
+.pt-40 { padding-top: 40px; }
+.pt-120 { padding-top: 120px; }
+.pt-140 { padding-top: 140px; }
+
+/* Padding Bottom */
+.pb-20 { padding-bottom: 20px; }
+.pb-40 { padding-bottom: 40px; }
+.pb-120 { padding-bottom: 120px; }
+.pb-140 { padding-bottom: 140px; }
+
+/* Padding Left */
+.pl-20 { padding-left: 20px; }
+.pl-40 { padding-left: 40px; }
+.pl-120 { padding-left: 120px; }
+.pl-140 { padding-left: 140px; }
+
+/* Padding Right */
+.pr-20 { padding-right: 20px; }
+.pr-40 { padding-right: 40px; }
+.pr-120 { padding-right: 120px; }
+.pr-140 { padding-right: 140px; }
+
+/* Background Colors */
+.bg-lightblue { background-color: #d0e7ff; }
+.bg-darkblue { background-color: #004080; }
+.bg-grey { background-color: #cccccc; }
+.bg-red { background-color: #FF0000; }
+
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+.mt-120 { margin-top: 60px; }
+.mt-140 { margin-top: 80px; }
+.mb-120 { margin-bottom: 60px; }
+.mb-140 { margin-bottom: 80px; }
+.ml-120 { margin-left: 60px; }
+.ml-140 { margin-left: 80px; }
+.mr-120 { margin-right: 60px; }
+.mr-140 { margin-right: 80px; }
+
+.pt-120 { padding-top: 60px; }
+.pt-140 { padding-top: 80px; }
+.pb-120 { padding-bottom: 60px; }
+.pb-140 { padding-bottom: 80px; }
+.pl-120 { padding-left: 60px; }
+.pl-140 { padding-left: 80px; }
+.pr-120 { padding-right: 60px; }
+.pr-140 { padding-right: 80px; }
+}
+
+
+
+
+/* Accordion container items */
+.cmp-accordion__item {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 12px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.cmp-accordion__item:focus-within {
+  box-shadow: 0 0 0 3px #005fcc; /* visible focus outline */
+}
+
+/* Accordion header */
+.cmp-accordion__header {
+  margin: 0;
+}
+
+/* Accordion button */
+.cmp-accordion__button {
+  width: 100%;
+  background-color: #f0f4f8;
+  border: none;
+  padding: 16px 20px;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #003366;
+  transition: background-color 0.3s ease;
+  border-bottom: 1px solid #ddd;
+  outline-offset: 2px;
+}
+
+.cmp-accordion__button:hover,
+.cmp-accordion__button:focus {
+  background-color: #d0e7ff;
+  outline: none;
+}
+
+.cmp-accordion__button--expanded {
+  background-color: #c0d9ff;
+}
+
+/* Accordion title */
+.cmp-accordion__title {
+  flex: 1;
+}
+
+/* Accordion icon (plus/minus or arrow) */
+.cmp-accordion__icon {
+  width: 16px;
+  height: 16px;
+  margin-left: 12px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+/* Draw arrow using CSS */
+.cmp-accordion__icon::before {
+  content: "+"; /* Default icon: plus */
+    font-size: 18px;
+    color: #003366;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+/* Rotate arrow when expanded */
+.cmp-accordion__button[aria-expanded="true"] .cmp-accordion__icon::before {
+   content: "✖";
+   color: #003366;
+}
+
+/* Accordion panel (content area) */
+.cmp-accordion__panel {
+  padding: 16px 20px;
+  background-color: #fafafa;
+  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  border-top: 1px solid #ddd;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  overflow: hidden;
+}
+
+/* Panel expanded */
+.cmp-accordion__panel--expanded {
+  max-height: 1000px; /* sufficiently large */
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+/* Panel collapsed */
+.cmp-accordion__panel:not(.cmp-accordion__panel--expanded) {
+  max-height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* Paragraph spacing inside accordion */
+.cmp-accordion__panel p {
+  margin: 0 0 1em 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .cmp-accordion__button {
+    padding: 12px 16px;
+    font-size: 0.9rem;
+  }
+
+  .cmp-accordion__panel {
+    padding: 12px 16px;
+    font-size: 0.9rem;
+  }
+}
