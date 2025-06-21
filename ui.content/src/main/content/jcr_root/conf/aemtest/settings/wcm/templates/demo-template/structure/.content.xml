@@ -10,10 +10,6 @@
             jcr:primaryType="nt:unstructured"
             sling:resourceType="aemtest/components/container"
             layout="responsiveGrid">
-            <experiencefragment-header
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="aemtest/components/experiencefragment"
-                fragmentVariationPath="/content/experience-fragments/aemtest/us/en/site/header/master"/>
             <container
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="aemtest/components/container"
